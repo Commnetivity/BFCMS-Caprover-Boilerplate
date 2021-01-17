@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Default Desktop/Computer template</title>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Cinzel|Montserrat|Oswald" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+		<script async src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.16.2/lazyload.min.js" integrity="sha256-2z309JVQNUkdt7x/pHJ5aREPhi1Wxo4GuvyEybMuyBc=" crossorigin="anonymous"></script>
+		<script async src="//cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />		
+		<script async src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.1.0/what-input.min.js" integrity="sha256-oiWVtA2/cQbVeMs6e3j0C7NbnLgziyFC3fuUse0G8+k=" crossorigin="anonymous"></script>
+		
+		<script body>
+			$(function(){
+				/* $( "body").on( "swiperight", function(event){ $(".menu-icon").click(); });
+					$( "body").on( "swipeleft", function(event){ $(".menu-icon").click(); }); */
+				var navbar = document.getElementById("topnav");
+				var sticky = navbar.offsetTop;
+				function topnavSticky() {
+					if ( window.pageYOffset >= sticky ) {
+						navbar.classList.add("sticky-nav");
+					} else {
+						navbar.classList.remove("sticky-nav");
+					}
+				}
+				
+				var myLazyLoad = new LazyLoad({
+					elements_selector: ".lazy",
+					load_delay: 100
+				});
+				
+			});
+			$(document).foundation();
+		</script>
+	</head>
+	<body>
+		<div  class="off-canvas position-left" id="offCanvas" data-off-canvas>
+			<div id="left-off-canvas-menu"></div>
+		</div>
+		<div class="off-canvas-content in-canvas-for-small push" data-off-canvas-content>
+			<section class="grid-y header">
+				<div class="leaderboardContainer cell auto"> 
+					<div class="leaderboard grid-container">
+						<img src="/Templates/gfx/header.png" />
+					</div>
+				</div>
+				<div class="cell auto">
+					<div class="grid-container full">
+						<div id="topnav" class="cell auto"></div>
+					</div>
+				</div>
+			</section>
+			<section class="main-section ">
+				<div class="contentWrapper grid-container">
+					<div id="content"></div>
+				</div>
+			</section>
+			<section id="footer" class="grid-container">
+				
+			</section>
+		</div>
+	</body>
+</html>

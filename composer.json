@@ -1,0 +1,5 @@
+{
+    "require" : {
+        "bigfootcms/auth": "^1.0.6",
+    }
+}
