@@ -1,5 +1,5 @@
 {
     "require" : {
-        "bigfootcms/auth": "^1.0.6",
+        "bigfootcms/auth": "^1.0.6"
     }
 }
